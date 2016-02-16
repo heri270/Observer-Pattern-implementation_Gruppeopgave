@@ -13,8 +13,5 @@ public class ElectronicDeviceTest {
 
         electronicDevice.setState("on");
 
-
-        System.out.println("hej Bob");
-
     }
 }
