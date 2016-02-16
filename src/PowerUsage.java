@@ -3,21 +3,20 @@
  */
 public class PowerUsage implements SimpleObserver {
 
-    private String state;
 
-    public PowerUsage(SimpleObservable obj, String state){
-        this.state = state;
+    public PowerUsage(SimpleObservable obj){
         obj.registerObserver(this);
     }
 
 
     @Override
     public void update(SimpleObservable obj) {
-        if (state.equalsIgnoreCase("on")) {
+        ElectronicDevice state = (ElectronicDevice)obj;
+        if (state.getState().equalsIgnoreCase("on")) {
             System.out.println("The power usage is normal.");
-        } if (state.equalsIgnoreCase("hibernate")) {
+        } if (state.getState().equalsIgnoreCase("hibernate")) {
             System.out.println("Power save mode.");
-        } if (state.equalsIgnoreCase("off")) {
+        } if (state.getState().equalsIgnoreCase("off")) {
             System.out.println("No power usage.");
         }
     }

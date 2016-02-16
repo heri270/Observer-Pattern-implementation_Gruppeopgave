@@ -7,11 +7,12 @@ public class ElectronicDeviceTest {
 
         ElectronicDevice electronicDevice = new ElectronicDevice();
 
-        DiodeLight diodeLight1 = new DiodeLight(electronicDevice, "on");
+        DiodeLight diodeLight = new DiodeLight(electronicDevice);
 
-        PowerUsage powerUsage = new PowerUsage(electronicDevice, "on");
+        PowerUsage powerUsage = new PowerUsage(electronicDevice);
 
-        electronicDevice.setState("on");
+        electronicDevice.setState("off");
+
 
     }
 }
