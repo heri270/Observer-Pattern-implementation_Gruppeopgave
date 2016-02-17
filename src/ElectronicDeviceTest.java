@@ -11,6 +11,8 @@ public class ElectronicDeviceTest {
 
         PowerUsage powerUsage = new PowerUsage(electronicDevice);
 
+
+        //ændre off til 'on', 'hibernate' eller 'off' for andre udskrivninger.
         electronicDevice.setState("off");
 
 
